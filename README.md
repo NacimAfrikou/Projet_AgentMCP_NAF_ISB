@@ -156,12 +156,16 @@ Ces projets explorent les fondamentaux de l'IA generative : chatbots, recherche 
 | [`GenAI/Texte/5_RAG_Modern.ipynb`](https://github.com/jsboige/CoursIA/blob/main/MyIA.AI.Notebooks/GenAI/Texte/5_RAG_Modern.ipynb) | Architecture RAG moderne avec embeddings |
 | [`GenAI/Texte/1_OpenAI_Intro.ipynb`](https://github.com/jsboige/CoursIA/blob/main/MyIA.AI.Notebooks/GenAI/Texte/1_OpenAI_Intro.ipynb) | Introduction a l'API OpenAI |
 | [`GenAI/Texte/3_Structured_Outputs.ipynb`](https://github.com/jsboige/CoursIA/blob/main/MyIA.AI.Notebooks/GenAI/Texte/3_Structured_Outputs.ipynb) | Generation de sorties structurees |
+| [`GenAI/SemanticKernel/05-SemanticKernel-VectorStores.ipynb`](https://github.com/jsboige/CoursIA/blob/main/MyIA.AI.Notebooks/GenAI/SemanticKernel/05-SemanticKernel-VectorStores.ipynb) | Integration Vector Stores avec SK |
+| [`GenAI/Texte/6_PDF_Web_Search.ipynb`](https://github.com/jsboige/CoursIA/blob/main/MyIA.AI.Notebooks/GenAI/Texte/6_PDF_Web_Search.ipynb) | Traitement PDF et recherche web |
 
 **References externes :**
 - [LangChain RAG Documentation](https://python.langchain.com/docs/tutorials/rag/)
 - [OpenAI Embeddings Guide](https://platform.openai.com/docs/guides/embeddings)
 - [FAISS - Facebook AI Similarity Search](https://github.com/facebookresearch/faiss)
 - [Chroma Vector Database](https://www.trychroma.com/)
+- [Pinecone](https://www.pinecone.io/) - Base de donnees vectorielle managee
+- [Weaviate](https://weaviate.io/) - Vector database open-source
 
 ---
 
@@ -254,10 +258,14 @@ Exploitez l'IA pour creer des experiences narratives immersives et interactives.
 |----------|-------------|
 | [`GenAI/SemanticKernel/03-SemanticKernel-Agents.ipynb`](https://github.com/jsboige/CoursIA/blob/main/MyIA.AI.Notebooks/GenAI/SemanticKernel/03-SemanticKernel-Agents.ipynb) | Systemes multi-agents |
 | [`GenAI/Texte/2_PromptEngineering.ipynb`](https://github.com/jsboige/CoursIA/blob/main/MyIA.AI.Notebooks/GenAI/Texte/2_PromptEngineering.ipynb) | Creation de personnages via prompts |
+| [`GenAI/SemanticKernel/fort-boyard-python.ipynb`](https://github.com/jsboige/CoursIA/blob/main/MyIA.AI.Notebooks/GenAI/SemanticKernel/fort-boyard-python.ipynb) | Exemple complet de jeu narratif multi-agents |
+| [`GameTheory/GameTheory-7-ExtensiveForm.ipynb`](https://github.com/jsboige/CoursIA/blob/main/MyIA.AI.Notebooks/GameTheory/GameTheory-7-ExtensiveForm.ipynb) | Jeux sequentiels et arbres de decision |
 
 **References externes :**
 - [AI Dungeon](https://aidungeon.com/) - Jeu narratif IA de reference
 - [AutoGen Multi-Agent](https://microsoft.github.io/autogen/) - Framework Microsoft pour agents conversationnels
+- [CrewAI](https://www.crewai.com/) - Framework pour agents collaboratifs
+- [LangGraph](https://langchain-ai.github.io/langgraph/) - Workflows cycliques pour agents
 
 ---
 
@@ -374,10 +382,13 @@ Projets axes sur la generation de contenu visuel, audio ou artistique.
 |----------|-------------|
 | [`GenAI/Images/02-2-FLUX-1-Advanced-Generation.ipynb`](https://github.com/jsboige/CoursIA/blob/main/MyIA.AI.Notebooks/GenAI/Images/02-2-FLUX-1-Advanced-Generation.ipynb) | Generation d'images coherentes |
 | [`GenAI/Images/03-1-Orchestration.ipynb`](https://github.com/jsboige/CoursIA/blob/main/MyIA.AI.Notebooks/GenAI/Images/03-1-Orchestration.ipynb) | Pipeline de generation multi-images |
+| [`GenAI/Images/01-5-Qwen-Image-Edit.ipynb`](https://github.com/jsboige/CoursIA/blob/main/MyIA.AI.Notebooks/GenAI/Images/01-5-Qwen-Image-Edit.ipynb) | Edition d'images pour retouches |
+| [`GenAI/Images/examples/literature-visual.ipynb`](https://github.com/jsboige/CoursIA/blob/main/MyIA.AI.Notebooks/GenAI/Images/examples/literature-visual.ipynb) | Generation d'illustrations narratives |
 
 **References externes :**
 - [ComicGen (Paper)](https://arxiv.org/abs/2312.15131) - Recherche sur la generation de BD
 - [Midjourney](https://www.midjourney.com/) - Style coherent pour personnages
+- [Leonardo.AI](https://leonardo.ai/) - Generation avec coherence de personnages
 
 ---
 
@@ -500,10 +511,14 @@ Outils pratiques pour automatiser des taches professionnelles.
 |----------|-------------|
 | [`GenAI/Texte/3_Structured_Outputs.ipynb`](https://github.com/jsboige/CoursIA/blob/main/MyIA.AI.Notebooks/GenAI/Texte/3_Structured_Outputs.ipynb) | Extraction structuree |
 | [`GenAI/Texte/5_RAG_Modern.ipynb`](https://github.com/jsboige/CoursIA/blob/main/MyIA.AI.Notebooks/GenAI/Texte/5_RAG_Modern.ipynb) | Analyse de documents |
+| [`ML/DataScienceWithAgents/Day2/Labs/Lab3-CV-Screening.ipynb`](https://github.com/jsboige/CoursIA/blob/main/MyIA.AI.Notebooks/ML/DataScienceWithAgents/PythonAgentsForDataScience/Day2/Labs/Lab3-CV-Screening/Lab3-CV-Screening.ipynb) | Lab complet de screening CV avec agents |
+| [`ML/DataScienceWithAgents/Day2/Labs/Lab2-RFP-Analysis.ipynb`](https://github.com/jsboige/CoursIA/blob/main/MyIA.AI.Notebooks/ML/DataScienceWithAgents/PythonAgentsForDataScience/Day2/Labs/Lab2-RFP-Analysis/Lab2-RFP-Analysis.ipynb) | Analyse de documents RFP |
 
 **References externes :**
 - [Resume Parser Libraries](https://github.com/OmkarPathak/pyresparser) - Parsing de CV
 - [HireVue](https://www.hirevue.com/) - Exemple commercial
+- [LinkedIn Recruiter](https://www.linkedin.com/talent/recruiter) - Sourcing avec IA
+- [Lever](https://www.lever.co/) - ATS avec IA integree
 
 ---
 
@@ -662,10 +677,17 @@ Projets ciblant l'amelioration de la productivite des developpeurs.
 - Suggerer des ameliorations avec explications
 - Verifier le respect des conventions
 
+**Notebooks de reference :**
+| Notebook | Description |
+|----------|-------------|
+| [`GenAI/Vibe-Coding/Claude-Code-101.ipynb`](https://github.com/jsboige/CoursIA/blob/main/MyIA.AI.Notebooks/GenAI/Vibe-Coding/Claude-Code-101.ipynb) | Assistance au code avec Claude |
+| [`GenAI/Texte/3_Structured_Outputs.ipynb`](https://github.com/jsboige/CoursIA/blob/main/MyIA.AI.Notebooks/GenAI/Texte/3_Structured_Outputs.ipynb) | Rapports de review structures |
+
 **References externes :**
 - [CodeRabbit](https://coderabbit.ai/) - Review automatique de PR
 - [Sourcery](https://sourcery.ai/) - Refactoring automatique
 - [SonarQube](https://www.sonarsource.com/products/sonarqube/) - Analyse statique
+- [GitHub Copilot PR Review](https://docs.github.com/en/copilot/using-github-copilot/code-review/using-copilot-code-review) - Review par Copilot
 
 ---
 
@@ -679,9 +701,17 @@ Projets ciblant l'amelioration de la productivite des developpeurs.
 - Adapter les idiomes et patterns
 - Gerer les bibliotheques et dependances
 
+**Notebooks de reference :**
+| Notebook | Description |
+|----------|-------------|
+| [`GenAI/SemanticKernel/Workbook-Template.ipynb`](https://github.com/jsboige/CoursIA/blob/main/MyIA.AI.Notebooks/GenAI/SemanticKernel/Workbook-Template.ipynb) | Template C# pour comparaison |
+| [`GenAI/SemanticKernel/Workbook-Template-Python.ipynb`](https://github.com/jsboige/CoursIA/blob/main/MyIA.AI.Notebooks/GenAI/SemanticKernel/Workbook-Template-Python.ipynb) | Equivalent Python pour comparaison |
+| [`GenAI/Texte/7_Code_Interpreter.ipynb`](https://github.com/jsboige/CoursIA/blob/main/MyIA.AI.Notebooks/GenAI/Texte/7_Code_Interpreter.ipynb) | Execution et validation de code |
+
 **References externes :**
 - [Tree-sitter](https://tree-sitter.github.io/tree-sitter/) - Parsing multi-langage
 - [TransCoder (Meta)](https://arxiv.org/abs/2006.03511) - Recherche sur la traduction de code
+- [Cursor](https://cursor.sh/) - IDE avec conversion de code assistee
 
 ---
 
@@ -725,10 +755,12 @@ Outils pedagogiques exploitant l'IA generative.
 |----------|-------------|
 | [`GenAI/Texte/5_RAG_Modern.ipynb`](https://github.com/jsboige/CoursIA/blob/main/MyIA.AI.Notebooks/GenAI/Texte/5_RAG_Modern.ipynb) | Extraction d'information |
 | [`GenAI/Texte/3_Structured_Outputs.ipynb`](https://github.com/jsboige/CoursIA/blob/main/MyIA.AI.Notebooks/GenAI/Texte/3_Structured_Outputs.ipynb) | Structuration des quiz |
+| [`Probas/Infer/Infer-5-Skills-IRT.ipynb`](https://github.com/jsboige/CoursIA/blob/main/MyIA.AI.Notebooks/Probas/Infer/Infer-5-Skills-IRT.ipynb) | Item Response Theory pour calibration de difficulte |
 
 **References externes :**
 - [Quizlet AI](https://quizlet.com/) - Exemple de plateforme
 - [Bloom's Taxonomy](https://en.wikipedia.org/wiki/Bloom%27s_taxonomy) - Niveaux cognitifs
+- [Computerized Adaptive Testing](https://en.wikipedia.org/wiki/Computerized_adaptive_testing) - Tests adaptatifs
 
 ---
 
@@ -769,6 +801,12 @@ Outils pedagogiques exploitant l'IA generative.
 |----------|-------------|
 | [`GenAI/Texte/3_Structured_Outputs.ipynb`](https://github.com/jsboige/CoursIA/blob/main/MyIA.AI.Notebooks/GenAI/Texte/3_Structured_Outputs.ipynb) | Evaluation structuree |
 | [`GradeBook.ipynb`](https://github.com/jsboige/CoursIA/blob/main/MyIA.AI.Notebooks/GradeBook.ipynb) | Systeme de notation |
+| [`Probas/Infer/Infer-10-Crowdsourcing.ipynb`](https://github.com/jsboige/CoursIA/blob/main/MyIA.AI.Notebooks/Probas/Infer/Infer-10-Crowdsourcing.ipynb) | Agregation de notes multiples evaluateurs |
+| [`Probas/Infer/Infer-6-TrueSkill.ipynb`](https://github.com/jsboige/CoursIA/blob/main/MyIA.AI.Notebooks/Probas/Infer/Infer-6-TrueSkill.ipynb) | Ranking et calibration des evaluations |
+
+**References externes :**
+- [Turnitin](https://www.turnitin.com/) - Detection de plagiat leader
+- [Gradescope](https://www.gradescope.com/) - Correction assistee par IA
 
 ---
 
@@ -781,6 +819,17 @@ Outils pedagogiques exploitant l'IA generative.
 - Evaluer les reponses de maniere constructive
 - Simuler differents styles d'interviewers
 - Fournir des conseils d'amelioration
+
+**Notebooks de reference :**
+| Notebook | Description |
+|----------|-------------|
+| [`GenAI/Texte/2_PromptEngineering.ipynb`](https://github.com/jsboige/CoursIA/blob/main/MyIA.AI.Notebooks/GenAI/Texte/2_PromptEngineering.ipynb) | Personnalites et roles via prompts |
+| [`GenAI/SemanticKernel/03-SemanticKernel-Agents.ipynb`](https://github.com/jsboige/CoursIA/blob/main/MyIA.AI.Notebooks/GenAI/SemanticKernel/03-SemanticKernel-Agents.ipynb) | Dialogue multi-agents (candidat/recruteur) |
+| [`Probas/Infer/Infer-5-Skills-IRT.ipynb`](https://github.com/jsboige/CoursIA/blob/main/MyIA.AI.Notebooks/Probas/Infer/Infer-5-Skills-IRT.ipynb) | Item Response Theory pour evaluation adaptative |
+
+**References externes :**
+- [Interviewing.io](https://interviewing.io/) - Plateforme d'entrainement aux entretiens
+- [Pramp](https://www.pramp.com/) - Practice interviews peer-to-peer
 
 ---
 
@@ -833,13 +882,16 @@ Projets ludiques explorant l'IA dans les jeux.
 **Notebooks de reference :**
 | Notebook | Description |
 |----------|-------------|
-| [`GameTheory/01-Normal-Form-Nash.ipynb`](https://github.com/jsboige/CoursIA/blob/main/MyIA.AI.Notebooks/GameTheory/01-Normal-Form-Nash.ipynb) | Fondamentaux de theorie des jeux |
-| [`GameTheory/07-Extensive-Form.ipynb`](https://github.com/jsboige/CoursIA/blob/main/MyIA.AI.Notebooks/GameTheory/07-Extensive-Form.ipynb) | Jeux sequentiels |
-| [`RL/stable_baseline_1.ipynb`](https://github.com/jsboige/CoursIA/blob/main/MyIA.AI.Notebooks/RL/stable_baseline_1.ipynb) | Apprentissage par renforcement |
+| [`GameTheory/GameTheory-2-NormalForm.ipynb`](https://github.com/jsboige/CoursIA/blob/main/MyIA.AI.Notebooks/GameTheory/GameTheory-2-NormalForm.ipynb) | Jeux en forme normale |
+| [`GameTheory/GameTheory-4-NashEquilibrium.ipynb`](https://github.com/jsboige/CoursIA/blob/main/MyIA.AI.Notebooks/GameTheory/GameTheory-4-NashEquilibrium.ipynb) | Equilibres de Nash |
+| [`GameTheory/GameTheory-7-ExtensiveForm.ipynb`](https://github.com/jsboige/CoursIA/blob/main/MyIA.AI.Notebooks/GameTheory/GameTheory-7-ExtensiveForm.ipynb) | Jeux sequentiels et arbres |
+| [`GameTheory/GameTheory-9-BackwardInduction.ipynb`](https://github.com/jsboige/CoursIA/blob/main/MyIA.AI.Notebooks/GameTheory/GameTheory-9-BackwardInduction.ipynb) | Induction retrograde pour strategies |
+| [`RL/stable_baseline_1_intro_cartpole.ipynb`](https://github.com/jsboige/CoursIA/blob/main/MyIA.AI.Notebooks/RL/stable_baseline_1_intro_cartpole.ipynb) | Apprentissage par renforcement |
 
 **References externes :**
-- [OpenSpiel (Google)](https://github.com/google-deepmind/open_spiel) - Framework de jeux
+- [OpenSpiel (Google)](https://github.com/google-deepmind/open_spiel) - Framework de jeux multi-agents
 - [BoardGame.io](https://boardgame.io/) - Framework pour jeux de plateau
+- [PettingZoo](https://pettingzoo.farama.org/) - Environnements multi-agents
 
 ---
 
@@ -857,12 +909,15 @@ Projets ludiques explorant l'IA dans les jeux.
 | Notebook | Description |
 |----------|-------------|
 | [`Sudoku/Sudoku-4-Z3.ipynb`](https://github.com/jsboige/CoursIA/blob/main/MyIA.AI.Notebooks/Sudoku/Sudoku-4-Z3.ipynb) | Resolution et generation de Sudoku avec Z3 |
-| [`Sudoku/Sudoku-3-OR-Tools.ipynb`](https://github.com/jsboige/CoursIA/blob/main/MyIA.AI.Notebooks/Sudoku/Sudoku-3-OR-Tools.ipynb) | Satisfaction de contraintes |
+| [`Sudoku/Sudoku-3-ORTools.ipynb`](https://github.com/jsboige/CoursIA/blob/main/MyIA.AI.Notebooks/Sudoku/Sudoku-3-ORTools.ipynb) | Satisfaction de contraintes |
+| [`Sudoku/Sudoku-2-Genetic.ipynb`](https://github.com/jsboige/CoursIA/blob/main/MyIA.AI.Notebooks/Sudoku/Sudoku-2-Genetic.ipynb) | Generation par algorithmes genetiques |
 | [`Search/CSPs_Intro.ipynb`](https://github.com/jsboige/CoursIA/blob/main/MyIA.AI.Notebooks/Search/CSPs_Intro.ipynb) | Problemes de satisfaction de contraintes |
+| [`Sudoku/Sudoku-5-DancingLinks.ipynb`](https://github.com/jsboige/CoursIA/blob/main/MyIA.AI.Notebooks/Sudoku/Sudoku-5-DancingLinks.ipynb) | Algorithme X de Knuth |
 
 **References externes :**
 - [Z3 Theorem Prover](https://github.com/Z3Prover/z3) - Solveur SMT
 - [OR-Tools](https://developers.google.com/optimization) - Optimisation Google
+- [PuzzleScript](https://www.puzzlescript.net/) - Creation de puzzles jouables
 
 ---
 
@@ -993,6 +1048,11 @@ Projets d'analyse de donnees et d'extraction d'insights.
 |----------|-------------|
 | [`GenAI/Texte/4_Function_Calling.ipynb`](https://github.com/jsboige/CoursIA/blob/main/MyIA.AI.Notebooks/GenAI/Texte/4_Function_Calling.ipynb) | Collecte de donnees |
 | [`Probas/Infer/Infer-4-Bayesian-Networks.ipynb`](https://github.com/jsboige/CoursIA/blob/main/MyIA.AI.Notebooks/Probas/Infer/Infer-4-Bayesian-Networks.ipynb) | Modelisation de tendances |
+| [`QuantConnect/Python/QC-Py-17-Sentiment-Analysis.ipynb`](https://github.com/jsboige/CoursIA/blob/main/MyIA.AI.Notebooks/QuantConnect/Python/QC-Py-17-Sentiment-Analysis.ipynb) | Analyse de sentiment et tendances |
+
+**References externes :**
+- [Google Trends API](https://trends.google.com/trends/) - Donnees de tendances
+- [Twitter/X API](https://developer.twitter.com/) - Donnees reseaux sociaux
 
 ---
 
@@ -1040,6 +1100,9 @@ Projets axes sur les agents IA autonomes, l'orchestration et les workflows intel
 **References externes :**
 - [Model Context Protocol (Anthropic)](https://modelcontextprotocol.io/) - Specification officielle
 - [MCP Servers Registry](https://github.com/modelcontextprotocol/servers) - Serveurs disponibles
+- [Introduction to MCP (Anthropic Course)](https://anthropic.skilljar.com/introduction-to-model-context-protocol) - Cours officiel Anthropic
+- [MCP Python SDK](https://github.com/modelcontextprotocol/python-sdk) - SDK Python officiel
+- [MCP TypeScript SDK](https://github.com/modelcontextprotocol/typescript-sdk) - SDK TypeScript officiel
 
 ---
 
@@ -1063,6 +1126,8 @@ Projets axes sur les agents IA autonomes, l'orchestration et les workflows intel
 **References externes :**
 - [GPT-4 Vision](https://platform.openai.com/docs/guides/vision) - Analyse d'images
 - [Claude Vision](https://docs.anthropic.com/claude/docs/vision) - Multimodal Anthropic
+- [Gemini Vision](https://ai.google.dev/gemini-api/docs/vision) - Multimodal Google
+- [LLaVA](https://llava-vl.github.io/) - Vision-Language Assistant open-source
 
 ---
 
@@ -1081,11 +1146,14 @@ Projets axes sur les agents IA autonomes, l'orchestration et les workflows intel
 |----------|-------------|
 | [`ML/DataScienceWithAgents/Day3/Labs/Lab7-Data-Analysis-Agent.ipynb`](https://github.com/jsboige/CoursIA/blob/main/MyIA.AI.Notebooks/ML/DataScienceWithAgents/PythonAgentsForDataScience/Day3/Labs/Lab7-Data-Analysis-Agent/Lab7-Data-Analysis-Agent.ipynb) | Agent d'analyse de donnees complet |
 | [`GenAI/Texte/7_Code_Interpreter.ipynb`](https://github.com/jsboige/CoursIA/blob/main/MyIA.AI.Notebooks/GenAI/Texte/7_Code_Interpreter.ipynb) | Code Interpreter pour calculs |
-| [`ML/DataScienceWithAgents/Day2/Labs/Lab5-Viz-ML.ipynb`](https://github.com/jsboige/CoursIA/blob/main/MyIA.AI.Notebooks/ML/DataScienceWithAgents/PythonAgentsForDataScience/Day2/Labs/Lab5-Viz-ML/Lab5-Viz-ML.ipynb) | Visualisation et ML |
+| [`ML/DataScienceWithAgents/Day3/Labs/Lab5-Viz-ML.ipynb`](https://github.com/jsboige/CoursIA/blob/main/MyIA.AI.Notebooks/ML/DataScienceWithAgents/PythonAgentsForDataScience/Day3/Labs/Lab5-Viz-ML/Lab5-Viz-ML.ipynb) | Visualisation et ML |
+| [`ML/DataScienceWithAgents/Day3/Labs/Lab4-DataWrangling.ipynb`](https://github.com/jsboige/CoursIA/blob/main/MyIA.AI.Notebooks/ML/DataScienceWithAgents/PythonAgentsForDataScience/Day3/Labs/Lab4-DataWrangling/Lab4-DataWrangling.ipynb) | Data wrangling et nettoyage |
+| [`ML/DataScienceWithAgents/Day3/Labs/Lab6-First-Agent.ipynb`](https://github.com/jsboige/CoursIA/blob/main/MyIA.AI.Notebooks/ML/DataScienceWithAgents/PythonAgentsForDataScience/Day3/Labs/Lab6-First-Agent/Lab6-First-Agent.ipynb) | Construction de votre premier agent |
 
 **References externes :**
 - [PandasAI](https://github.com/Sinaptik-AI/pandas-ai) - Analyse de donnees conversationnelle
 - [LangChain Data Agent](https://python.langchain.com/docs/integrations/toolkits/pandas)
+- [Streamlit](https://streamlit.io/) - Interface utilisateur pour data apps
 
 ---
 
@@ -1194,10 +1262,14 @@ Projets axes sur l'evaluation et l'amelioration de la responsabilite des systeme
 |----------|-------------|
 | [`GenAI/Texte/2_PromptEngineering.ipynb`](https://github.com/jsboige/CoursIA/blob/main/MyIA.AI.Notebooks/GenAI/Texte/2_PromptEngineering.ipynb) | Techniques de prompting |
 | [`GenAI/Texte/3_Structured_Outputs.ipynb`](https://github.com/jsboige/CoursIA/blob/main/MyIA.AI.Notebooks/GenAI/Texte/3_Structured_Outputs.ipynb) | Mesures structurees |
+| [`Probas/Infer/Infer-7-Classification.ipynb`](https://github.com/jsboige/CoursIA/blob/main/MyIA.AI.Notebooks/Probas/Infer/Infer-7-Classification.ipynb) | Classification bayesienne pour detection |
 
 **References externes :**
 - [HELM Benchmark](https://crfm.stanford.edu/helm/) - Evaluation holistique des LLMs
 - [DecodingTrust](https://decodingtrust.github.io/) - Benchmark de confiance
+- [AI Fairness 360 (IBM)](https://aif360.res.ibm.com/) - Toolkit open-source de detection de biais
+- [Fairlearn (Microsoft)](https://fairlearn.org/) - Bibliotheque pour l'equite en ML
+- [What-If Tool (Google)](https://pair-code.github.io/what-if-tool/) - Exploration visuelle des biais
 
 ---
 
@@ -1216,9 +1288,17 @@ Projets axes sur l'evaluation et l'amelioration de la responsabilite des systeme
 |----------|-------------|
 | [`GenAI/Texte/3_Structured_Outputs.ipynb`](https://github.com/jsboige/CoursIA/blob/main/MyIA.AI.Notebooks/GenAI/Texte/3_Structured_Outputs.ipynb) | Classification structuree |
 
+**Notebooks de reference :**
+| Notebook | Description |
+|----------|-------------|
+| [`GenAI/Texte/3_Structured_Outputs.ipynb`](https://github.com/jsboige/CoursIA/blob/main/MyIA.AI.Notebooks/GenAI/Texte/3_Structured_Outputs.ipynb) | Classification structuree |
+| [`Probas/Pyro_RSA_Rational_Speech_Acts_Hyperbole.ipynb`](https://github.com/jsboige/CoursIA/blob/main/MyIA.AI.Notebooks/Probas/Pyro_RSA_Rational_Speech_Acts_Hyperbole.ipynb) | Pragmatique et actes de langage |
+
 **References externes :**
 - [Perspective API](https://perspectiveapi.com/) - Detection de toxicite Google
 - [OpenAI Moderation](https://platform.openai.com/docs/guides/moderation) - API de moderation
+- [Detoxify](https://github.com/unitaryai/detoxify) - Detecteur de toxicite open-source
+- [HuggingFace Toxic Comment Classification](https://huggingface.co/spaces/evaluate-measurement/toxicity)
 
 ---
 
@@ -1353,10 +1433,10 @@ Donnees utilisateur -> Modele bayesien (Infer.NET) -> Distributions -> LLM (expl
 **Notebooks de reference :**
 | Notebook | Description |
 |----------|-------------|
-| [`GameTheory/01-Normal-Form-Nash.ipynb`](https://github.com/jsboige/CoursIA/blob/main/MyIA.AI.Notebooks/GameTheory/01-Normal-Form-Nash.ipynb) | Equilibres de Nash |
-| [`GameTheory/13-Cooperative-Games.ipynb`](https://github.com/jsboige/CoursIA/blob/main/MyIA.AI.Notebooks/GameTheory/13-Cooperative-Games.ipynb) | Jeux cooperatifs, valeur de Shapley |
-| [`GameTheory/14-Mechanism-Design.ipynb`](https://github.com/jsboige/CoursIA/blob/main/MyIA.AI.Notebooks/GameTheory/14-Mechanism-Design.ipynb) | Design de mecanismes |
-| [`GameTheory/17-MARL.ipynb`](https://github.com/jsboige/CoursIA/blob/main/MyIA.AI.Notebooks/GameTheory/17-MARL.ipynb) | Multi-Agent Reinforcement Learning |
+| [`GameTheory/GameTheory-4-NashEquilibrium.ipynb`](https://github.com/jsboige/CoursIA/blob/main/MyIA.AI.Notebooks/GameTheory/GameTheory-4-NashEquilibrium.ipynb) | Equilibres de Nash |
+| [`GameTheory/GameTheory-15-CooperativeGames.ipynb`](https://github.com/jsboige/CoursIA/blob/main/MyIA.AI.Notebooks/GameTheory/GameTheory-15-CooperativeGames.ipynb) | Jeux cooperatifs, valeur de Shapley |
+| [`GameTheory/GameTheory-16-MechanismDesign.ipynb`](https://github.com/jsboige/CoursIA/blob/main/MyIA.AI.Notebooks/GameTheory/GameTheory-16-MechanismDesign.ipynb) | Design de mecanismes |
+| [`GameTheory/GameTheory-17-MultiAgent-RL.ipynb`](https://github.com/jsboige/CoursIA/blob/main/MyIA.AI.Notebooks/GameTheory/GameTheory-17-MultiAgent-RL.ipynb) | Multi-Agent Reinforcement Learning |
 
 **References externes :**
 - [ANAC (Automated Negotiating Agents Competition)](http://ii.tudelft.nl/nego/node/2) - Competition de reference
@@ -1428,10 +1508,11 @@ Donnees utilisateur -> Modele bayesien (Infer.NET) -> Distributions -> LLM (expl
 **Notebooks de reference :**
 | Notebook | Description |
 |----------|-------------|
-| [`QuantConnect/01-Setup.ipynb`](https://github.com/jsboige/CoursIA/blob/main/MyIA.AI.Notebooks/QuantConnect/01-Setup.ipynb) | Introduction a QuantConnect |
-| [`QuantConnect/18-ML-Features.ipynb`](https://github.com/jsboige/CoursIA/blob/main/MyIA.AI.Notebooks/QuantConnect/18-ML-Features.ipynb) | Machine Learning pour trading |
-| [`QuantConnect/23-Reinforcement-Learning.ipynb`](https://github.com/jsboige/CoursIA/blob/main/MyIA.AI.Notebooks/QuantConnect/23-Reinforcement-Learning.ipynb) | RL pour strategies de trading |
-| [`QuantConnect/26-LLM-Integration.ipynb`](https://github.com/jsboige/CoursIA/blob/main/MyIA.AI.Notebooks/QuantConnect/26-LLM-Integration.ipynb) | Integration LLM et analyse de sentiment |
+| [`QuantConnect/Python/QC-Py-01-Setup.ipynb`](https://github.com/jsboige/CoursIA/blob/main/MyIA.AI.Notebooks/QuantConnect/Python/QC-Py-01-Setup.ipynb) | Introduction a QuantConnect |
+| [`QuantConnect/Python/QC-Py-18-ML-Features-Engineering.ipynb`](https://github.com/jsboige/CoursIA/blob/main/MyIA.AI.Notebooks/QuantConnect/Python/QC-Py-18-ML-Features-Engineering.ipynb) | Feature engineering ML |
+| [`QuantConnect/Python/QC-Py-25-Reinforcement-Learning.ipynb`](https://github.com/jsboige/CoursIA/blob/main/MyIA.AI.Notebooks/QuantConnect/Python/QC-Py-25-Reinforcement-Learning.ipynb) | RL pour strategies de trading |
+| [`QuantConnect/Python/QC-Py-26-LLM-Trading-Signals.ipynb`](https://github.com/jsboige/CoursIA/blob/main/MyIA.AI.Notebooks/QuantConnect/Python/QC-Py-26-LLM-Trading-Signals.ipynb) | LLM et analyse de sentiment |
+| [`QuantConnect/Python/QC-Py-17-Sentiment-Analysis.ipynb`](https://github.com/jsboige/CoursIA/blob/main/MyIA.AI.Notebooks/QuantConnect/Python/QC-Py-17-Sentiment-Analysis.ipynb) | Analyse de sentiment financier |
 
 **References externes :**
 - [QuantConnect LEAN](https://www.quantconnect.com/) - Plateforme de trading algorithmique
