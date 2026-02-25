@@ -7,6 +7,7 @@ from tempfile import NamedTemporaryFile
 import streamlit as st
 
 from src.extractors import extract_document
+from src.models import Invoice, Order
 
 # Configuration de la page
 st.set_page_config(
@@ -97,12 +98,20 @@ if uploaded_files:
                         st.success(f"{icon} **Type détecté :** {doc_type}")
                         
                         # Informations supplémentaires selon le type
-                        if hasattr(document, 'total_amount'):
-                            st.metric("💰 Montant total", f"{document.total_amount} {getattr(document, 'currency', '')}")
-                        if hasattr(document, 'date'):
-                            st.info(f"📅 Date : {document.date}")
-                        if hasattr(document, 'supplier_name'):
-                            st.info(f"🏢 Fournisseur : {document.supplier_name}")
+                        if isinstance(document, Invoice):
+                            if document.total:
+                                st.metric("💰 Montant total", f"{document.total} {document.currency or ''}")
+                            if document.invoice_date:
+                                st.info(f"📅 Date : {document.invoice_date}")
+                            if document.seller and document.seller.name:
+                                st.info(f"🏢 Vendeur : {document.seller.name}")
+                        elif isinstance(document, Order):
+                            if document.total_price:
+                                st.metric("💰 Montant total", f"{document.total_price} {document.currency or ''}")
+                            if document.order_date:
+                                st.info(f"📅 Date : {document.order_date}")
+                            if document.customer_name:
+                                st.info(f"👤 Client : {document.customer_name}")
                         
                 except Exception as e:
                     st.error(f"❌ Erreur lors du traitement : {str(e)}")
