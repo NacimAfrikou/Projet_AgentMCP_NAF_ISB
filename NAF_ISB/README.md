@@ -10,6 +10,18 @@ Il vise à transformer des documents non structurés (par ex. factures, formulai
 - **Valider et normaliser** les données extraites (formats de dates, numéros, montants).
 - **Exporter** les résultats dans un format **JSON structuré** (et éventuellement CSV).
 
+### Formats de fichiers supportés
+
+L'application supporte maintenant plusieurs types de fichiers non structurés :
+
+- **📄 PDF** - Documents PDF (via pdfplumber)
+- **📝 Word** - Documents Microsoft Word (.docx)
+- **📃 Texte** - Fichiers texte brut (.txt, .text)
+- ** Excel** - Fichiers Excel (.xlsx, .xls)
+- **📈 CSV** - Fichiers CSV
+
+L'extraction de texte est automatiquement adaptée selon le type de fichier détecté.
+
 ### Installation
 
 1. Se placer à la racine du dépôt cloné :
@@ -41,7 +53,17 @@ cd NAF_ISB
 python -m src.main --input "data/input/mon_fichier.pdf" --output "data/output/resultat.json"
 ```
 
-> Cette commande sera ajustée au fur et à mesure que l’API d’extraction sera définie (schéma JSON final, types de documents supportés, etc.).
+L'application accepte différents formats de fichiers (PDF, DOCX, TXT, images, Excel, CSV).
+
+**Interface web Streamlit :**
+
+Pour utiliser l'interface web interactive :
+
+```bash
+streamlit run app.py
+```
+
+Ou double-cliquez sur `run_app.bat` pour démarrer l'interface automatiquement.
 
 ### Structure du projet
 

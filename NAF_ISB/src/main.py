@@ -1,4 +1,4 @@
-"""Point d'entrée – extraction de documents PDF en JSON."""
+"""Point d'entrée – extraction de documents non structurés en JSON."""
 
 import json
 import sys
@@ -13,11 +13,11 @@ INPUT_DIR = Path(__file__).resolve().parent.parent / "data" / "input"
 OUTPUT_DIR = Path(__file__).resolve().parent.parent / "data" / "output"
 
 
-def process_one(pdf_path: Path, output_path: Path) -> None:
-    """Traite un PDF : détection du type, extraction, écriture JSON."""
-    print(f"\n--- Traitement : {pdf_path.name} ---")
+def process_one(file_path: Path, output_path: Path) -> None:
+    """Traite un fichier : détection du type, extraction, écriture JSON."""
+    print(f"\n--- Traitement : {file_path.name} ---")
 
-    document = extract_document(pdf_path)
+    document = extract_document(file_path)
     print(f"  Type détecté : {document.document_type}")
 
     result = document.model_dump(mode="json")
@@ -29,33 +29,37 @@ def process_one(pdf_path: Path, output_path: Path) -> None:
 
 
 def main() -> None:
-    """Traite tous les PDF de data/input/ ou un chemin passé en argument."""
+    """Traite tous les fichiers de data/input/ ou un chemin passé en argument."""
+    # Extensions supportées
+    SUPPORTED_EXTS = {".pdf", ".docx", ".txt", ".text", ".xlsx", ".xls", ".csv"}
+    
     if len(sys.argv) > 1:
         target = Path(sys.argv[1])
         if target.is_dir():
-            pdf_files = sorted(target.glob("*.pdf"))
-        elif target.is_file() and target.suffix.lower() == ".pdf":
-            pdf_files = [target]
+            files = sorted([f for f in target.iterdir() if f.suffix.lower() in SUPPORTED_EXTS])
+        elif target.is_file():
+            files = [target]
         else:
-            print(f"Erreur : '{target}' n'est ni un fichier PDF ni un dossier.")
+            print(f"Erreur : '{target}' n'existe pas.")
             sys.exit(1)
     else:
-        pdf_files = sorted(INPUT_DIR.glob("*.pdf"))
+        files = sorted([f for f in INPUT_DIR.iterdir() if f.suffix.lower() in SUPPORTED_EXTS])
 
-    if not pdf_files:
-        print("Aucun fichier PDF trouvé.")
+    if not files:
+        print("Aucun fichier supporté trouvé.")
+        print(f"Extensions supportées : {', '.join(SUPPORTED_EXTS)}")
         sys.exit(0)
 
-    print(f"=== NAF_ISB – {len(pdf_files)} fichier(s) à traiter ===")
+    print(f"=== NAF_ISB – {len(files)} fichier(s) à traiter ===")
 
     ok, ko = 0, 0
-    for pdf in pdf_files:
-        out = OUTPUT_DIR / (pdf.stem + ".json")
+    for file in files:
+        out = OUTPUT_DIR / (file.stem + ".json")
         try:
-            process_one(pdf, out)
+            process_one(file, out)
             ok += 1
         except Exception as exc:
-            print(f"  ERREUR sur {pdf.name} : {exc}")
+            print(f"  ERREUR sur {file.name} : {exc}")
             ko += 1
 
     print(f"\n=== Résumé : {ok} réussi(s), {ko} erreur(s) ===")
