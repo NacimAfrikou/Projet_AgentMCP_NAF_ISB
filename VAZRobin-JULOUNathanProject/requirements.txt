@@ -1,40 +1,9 @@
-# Dépendances Python pour le Revieweur de Code IA
-
-# LLM APIs
+python-dotenv==1.0.1
+requests==2.31.0
 openai>=1.50.0
-anthropic>=0.40.0
+Flask==3.0.2
 
-# Parsing de code et diffs
-gitpython>=3.1.40
-unidiff>=0.7.5
-
-# Analyse statique de code
-pylint>=3.0.0
-flake8>=6.0.0
-bandit>=1.7.5
-ruff>=0.5.0
-
-# Parsing de code
-astroid>=3.0.0
-
-# Configuration
-python-dotenv>=1.0.0
-pydantic>=2.0.0
-pydantic-settings>=2.0.0
-
-# CLI et interface
-click>=8.1.0
-rich>=13.0.0
-typer>=0.9.0
-
-# Logging et monitoring
-loguru>=0.7.0
-
-# Tests
-pytest>=7.4.0
-pytest-cov>=4.1.0
-pytest-mock>=3.11.0
-
-# Documentation
-mkdocs>=1.5.0
-mkdocs-material>=9.0.0
+Flask-SQLAlchemy>=3.1.1
+PyMySQL>=1.1.0
+cryptography>=42.0.0
+Werkzeug>=3.0.0

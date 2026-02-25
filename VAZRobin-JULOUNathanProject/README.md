@@ -1,157 +1,47 @@
-# Revieweur de Code IA
 
-## Description
+# 🤖 AI Code Reviewer - Assistant de Revue de Code Intelligent
 
-Outil d'analyse de code automatique utilisant l'IA pour:
-- Parser les diffs et Pull Requests
-- Detecter les patterns problematiques
-- Suggerer des ameliorations avec explications
-- Verifier le respect des conventions
-- Fournir un rapport structure et lisible
+Ce projet a été réalisé par **Robin et Nathan** dans le cadre de nos études (E3). Il s'agit d'une application web complète conçue pour automatiser et enrichir le processus de **Code Review** (revue de code) sur GitHub grâce à l'Intelligence Artificielle.
+
+Plus qu'un simple générateur de rapports, cet outil agit comme un véritable mentor technique capable de s'adapter au niveau du développeur et d'échanger avec lui de manière interactive.
 
 ---
 
-## Architecture Technique
+## ✨ Fonctionnalités Principales
 
-```
-VAZRobin-JULOUNathanProject/
-├── src/
-│   ├── __init__.py
-│   ├── main.py              # Point d'entree CLI
-│   ├── config.py            # Configuration
-│   ├── parsers/             # Parsing de code/diffs
-│   │   ├── __init__.py
-│   │   ├── git_parser.py
-│   │   └── diff_parser.py
-│   ├── analyzers/           # Analyseurs de code
-│   │   ├── __init__.py
-│   │   ├── security_analyzer.py
-│   │   ├── performance_analyzer.py
-│   │   └── style_analyzer.py
-│   ├── llm/                 # Integration LLM
-│   │   ├── __init__.py
-│   │   ├── openai_client.py
-│   │   └── anthropic_client.py
-│   └── reporters/           # Rapports
-│       ├── __init__.py
-│       ├── markdown_reporter.py
-│       └── console_reporter.py
-├── tests/                   # Tests unitaires
-├── docs/                    # Documentation
-├── slides/                  # Presentation
-├── .env.example             # Template variables d'environnement
-├── .gitignore
-├── requirements.txt
-└── README.md
-```
+* **🔍 Extraction Automatique :** Connexion transparente à l'API publique de GitHub pour récupérer les modifications exactes (le "Diff") d'une Pull Request.
+* **🎓 Pédagogie Adaptative (Prompt Engineering) :** * *Mode Junior :* L'IA agit comme un mentor bienveillant. Elle vulgarise, explique le "pourquoi" des erreurs et commente abondamment le code corrigé.
+  * *Mode Senior :* L'IA va droit au but avec des retours purement techniques (architecture, failles critiques, optimisation).
+* **💬 Chatbot Interactif Intégré :** Une fois le rapport généré, l'utilisateur peut discuter directement avec l'IA pour lui demander des précisions sur une faille, lui faire réécrire une fonction, ou débattre d'un choix architectural (l'IA garde en mémoire tout le contexte du code).
+* **🔐 Espace Personnel Sécurisé :** Système d'authentification complet avec hachage cryptographique des mots de passe (`Werkzeug`).
+* **📚 Historique Persistant :** Sauvegarde automatique des revues en base de données (MySQL) pour y revenir à tout moment.
 
 ---
 
-## Installation
+## 🛠️ Stack Technique
 
-### Pre-requis
-
-- Python 3.10 ou superieur
-- Git
-- Une cle API OpenAI ou Anthropic
-
-### Etapes
-
-1. Cloner le depot:
-```bash
-git clone <votre-fork-url>
-cd 2025-MSBNS3IN03-GenAI/VAZRobin-JULOUNathanProject
-```
-
-2. Creer un environnement virtuel:
-```bash
-python -m venv venv
-source venv/bin/activate  # Linux/Mac
-# ou
-venv\Scripts\activate  # Windows
-```
-
-3. Installer les dependances:
-```bash
-pip install -r requirements.txt
-```
-
-4. Configurer les variables d'environnement:
-```bash
-cp .env.example .env
-# Editez .env avec vos cles API
-```
+* **Backend :** Python 3, Flask, SQLAlchemy (ORM).
+* **Frontend :** HTML5, CSS3 (Vanilla, design moderne), JavaScript (Fetch API, DOM manipulation).
+* **Base de données :** MySQL (via PyMySQL).
+* **Intelligence Artificielle :** API OpenRouter (modèle `anthropic/claude-3.5-sonnet` optimisé pour le code).
+* **Autres :** `requests` (Appels API GitHub), `marked.js` (Rendu Markdown en HTML).
 
 ---
 
-## Utilisation
+## 📁 Architecture du Projet (Modèle-Vue-Contrôleur)
 
-### Ligne de commande
-
-Analyser un fichier:
-```bash
-python -m src.main analyze fichier.py
+```text
+projet-revieweur-ia/
+├── app.py                # Point d'entrée, Serveur web Flask & Routes API
+├── requirements.txt      # Liste des dépendances Python
+├── .env                  # Variables d'environnement secrètes (Clé API) - NON INCLUS
+├── src/                  # Logique métier ("Cerveau" de l'application)
+│   ├── config.py         # Chargement sécurisé de la configuration
+│   ├── git_parser.py     # Communication avec l'API REST de GitHub
+│   └── ai_reviewer.py    # Logique IA, Prompts, et gestion de la mémoire du Chat
+└── templates/            # Vues (Interface Utilisateur)
+    ├── index.html        # Page principale : Analyse et Chat interactif
+    ├── login.html        # Page de connexion
+    ├── register.html     # Page d'inscription
+    └── historique.html   # Tableau de bord listant les anciennes analyses
 ```
-
-Analyser un diff:
-```bash
-python -m src.main review --diff HEAD~1..HEAD
-```
-
-Analyser une Pull Request:
-```bash
-python -m src.main review --pr 123
-```
-
----
-
-## Notebooks de Reference
-
-Ce projet s'appuie sur les notebooks suivants du cours:
-
-| Notebook | Description |
-|----------|-------------|
-| [GenAI/Vibe-Coding/Claude-Code-101.ipynb](https://github.com/jsboige/CoursIA/blob/main/MyIA.AI.Notebooks/GenAI/Vibe-Coding/Claude-Code-101.ipynb) | Assistance au code avec Claude |
-| [GenAI/Texte/3_Structured_Outputs.ipynb](https://github.com/jsboige/CoursIA/blob/main/MyIA.AI.Notebooks/GenAI/Texte/3_Structured_Outputs.ipynb) | Rapports de review structures |
-
----
-
-## References Externes
-
-- [CodeRabbit](https://coderabbit.ai/) - Review automatique de PR
-- [Sourcery](https://sourcery.ai/) - Refactoring automatique
-- [SonarQube](https://www.sonarsource.com/products/sonarqube/) - Analyse statique
-- [GitHub Copilot PR Review](https://docs.github.com/en/copilot/using-github-copilot/code-review/using-copilot-code-review)
-
----
-
-## Developpement
-
-### Lancer les tests
-```bash
-pytest tests/
-```
-
-### Avec couverture
-```bash
-pytest --cov=src tests/
-```
-
----
-
-## Calendrier du Projet
-
-| Etape | Date | Statut |
-|-------|------|--------|
-| Initialisation | 5 fevrier 2026 | En cours |
-| Developpement core | A venir | |
-| Tests et validation | A venir | |
-| Documentation | A venir | |
-| Soumission PR | 25 fevrier 2026 | |
-| Soutenance | 27 fevrier 2026 | |
-
----
-
-## License
-
-Ce projet est soumis aux memes conditions que le depot parent.
