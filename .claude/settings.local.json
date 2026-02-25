@@ -1,9 +1,0 @@
-{
-  "permissions": {
-    "allow": [
-      "Bash(pip install pydantic PyMuPDF pdfplumber -q)",
-      "Bash(pip install pydantic PyMuPDF pdfplumber)",
-      "Bash(python -m src.main --input \"data/input/sample_invoice.txt\" --verbose)"
-    ]
-  }
-}
