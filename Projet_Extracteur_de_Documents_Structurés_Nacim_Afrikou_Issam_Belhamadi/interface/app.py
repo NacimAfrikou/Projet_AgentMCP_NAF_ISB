@@ -1,10 +1,14 @@
 """Interface Streamlit pour l'extraction de documents non structurés."""
 
 import json
+import sys
 from pathlib import Path
 from tempfile import NamedTemporaryFile
 
 import streamlit as st
+
+# Ajouter le répertoire parent au PYTHONPATH pour importer le module src
+sys.path.insert(0, str(Path(__file__).parent.parent))
 
 from src.extractors import extract_document
 from src.models import Invoice, Order
