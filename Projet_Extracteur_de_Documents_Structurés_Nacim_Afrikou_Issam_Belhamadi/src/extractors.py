@@ -14,7 +14,10 @@ try:
 except ImportError:
     pd = None
 
-from .llm_client import detect_document_type, extract_invoice_with_llm, extract_order_with_llm
+from .llm_client import (
+    detect_document_type, extract_invoice_with_llm, extract_order_with_llm,
+    detect_document_type_from_image, extract_invoice_from_image, extract_order_from_image
+)
 from .models import ExtractedDocument, Invoice, Order
 
 
@@ -57,6 +60,11 @@ def _extract_text_from_txt(path: Path) -> str:
     return path.read_text(encoding="utf-8")
 
 
+def _is_image_file(path: Path) -> bool:
+    """Vérifie si le fichier est une image supportée par GPT-4 Vision."""
+    return path.suffix.lower() in (".png", ".jpg", ".jpeg", ".gif", ".webp")
+
+
 def _extract_text_from_file(path: Path) -> str:
     """Détecte le type de fichier et extrait le texte avec la méthode appropriée."""
     suffix = path.suffix.lower()
@@ -82,11 +90,25 @@ def _extract_text_from_file(path: Path) -> str:
 def extract_document(path: Path) -> ExtractedDocument:
     """Point d'entrée : détecte le type puis extrait via Structured Output.
 
-    1. Lit le texte brut du fichier (PDF, DOCX, TXT, images, CSV, Excel...)
+    1. Lit le texte brut du fichier (PDF, DOCX, TXT, CSV, Excel...) OU traite l'image avec GPT-4 Vision
     2. Détecte le type (order / invoice) via LLM
     3. Extrait les champs avec le schéma Pydantic correspondant
     4. Retourne un objet Order ou Invoice validé automatiquement
     """
+    # Si c'est une image, utiliser GPT-4 Vision directement
+    if _is_image_file(path):
+        doc_type = detect_document_type_from_image(path)
+        
+        if doc_type == "invoice":
+            invoice = extract_invoice_from_image(path, Invoice)
+            invoice.source_file = str(path)
+            return invoice
+        
+        order = extract_order_from_image(path, Order)
+        order.source_file = str(path)
+        return order
+    
+    # Sinon, extraction de texte classique
     text = _extract_text_from_file(path)
     doc_type = detect_document_type(text)
 
